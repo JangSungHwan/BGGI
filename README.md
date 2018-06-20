@@ -1,2 +1,0 @@
-# JangSungHwan.github.io
-BGGI
