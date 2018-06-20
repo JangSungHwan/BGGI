@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BGGI</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+        </style>
+    </head>
+    <center><body background="background.jpg">
+        <center>
+            <div style="background-color: #ffffff;width:55%;height:600%; font-family: Arial, Helvetica, sans-serif;opacity: 0.93;">
+               <p>&nbsp;</p>
+                <h1>SKS</h1>
+                <p>
+                <table border=0 width="90%" height="300" bgcolor="white">
+                    <tr>
+                   <td bgcolor="whitesmoke"> <center><a href="SKS.html"><img src="SKS.PNG" title="반자동 러시아 지정사수 소총"></a></center></td>
+                 
+                        <td bgcolor="#D9E5FF"> <p> 
+                                &nbsp;&nbsp;전투력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<meter value="0.7"></meter><br />
+                                &nbsp;&nbsp;유효사거리&nbsp;&nbsp;<meter value="0.67"></meter><br />
+                                &nbsp;&nbsp;안정성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<meter value="0.3"></meter><br />
+                                &nbsp;&nbsp;연사율&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<meter value="0.40"></meter><br />
+                            
+                       <form name="tip">
+                            &nbsp; <select name="tips" onchange="showData2()">
+                            <option value="효과 없음">총구 파츠</option>
+                            <option value="- 25.00% 반동 패턴<br>
+                            - 10.00% 수평 반동<br>
+                            - 15.00% 수직 반동<br>
+                            - 10.00% 탄 확산<br>
+                            수평 반동이 줄어들고, 수직 반동은 크게 줄어듭니다">보정기</option>
+                            <option value="- 10.00% 반동 패턴<br>
+                            - 10.00% 수평 반동<br>
+                            - 10.00% 수직 반동<br>
+                            총구 화염을 가려주고 수평, 수직 반동이 줄어듭니다">소염기</option>
+                            <option value="- 5.00% 탄튐<br>
+                            발사음을 억제해 줍니다">소음기</option>
+                        </select>
+                    </form>    
+
+                 <p><form name="tan">
+                        &nbsp; <select name="demo" onchange="showData1()">
+                                    <option value="효과 없음">탄창</option>
+                                    <option value="+10발 (총 20발) <br>
+                                    장탄 수가 증가합니다">대용량 탄창</option>
+                                    <option value="- 30.00% 재장전 속도<br>
+                                    재장전 속도가 빨라집니다">퀵드로우 탄창</option>
+                                    <option value="+10발 (총 20발)<br>
+                                    - 30.00% 재장전 속도<br>
+                                    재장전 속도가 크게 빨라지고 장탄 수가 증가합니다">대용량 퀵드로우 탄창</option>
+                                </select>
+                            </form> </p>
+
+                 <p><form name="eye">
+                        &nbsp; <select name="eyes" onchange="showData3()">
+                      <option value="효과 없음">조준경</option>
+                      <option value="+ 20.00% 정조준 속도">레드도트사이트</option>
+                       <option value="+ 20.00% 정조준 속도">홀로그램조준기</option>
+                       <option value="1.80x 배율<br>
+                       +10.00% 정조준 속도">2배율 스코프</option>
+                       <option value="2.70x 배율<br>
+                       +10.00% 정조준 속도">3배율 스코프</option>
+                       <option value="4.00x 배율">4배율 스코프</option>
+                       <option value="5.5x 배율">6배율 스코프</option>
+                       <option value="7.50x 배율">8배율 스코프</option>
+                       <option value="15x 배율">15배율 스코프</option>
+                            </select></form></p>
+                          
+                            <p><form name="hand">
+                                &nbsp; <select name="handle" onchange="showData4()">
+                              <option value="효과 없음">손잡이</option>
+                              <option value="- 20.00% 반동 패턴<br>
+                              - 15.00% 수평 반동<br>
+                              + 10.00% 정조준 속도<br>
+                              +20.00% 호흡 흔들림<br>
+                              +5.00% 격발 흔들림<br>
+                              반동 회복 시간과 조준 속도가 늘어나지만, 수평 반동을 현저히 줄어듭니다">앵글 손잡이</option>
+                               <option value="- 20.00% 반동 패턴<br>
+                               - 15.00% 수직 반동<br>
+                               - 15.00% 격발 흔들림<br>
+                               수직 반동이 줄어듭니다">수직 손잡이</option>
+                               <option value="-20.00% 반동 패턴<br>
+                               -8.00% 수평 반동<br>
+                               -8.00% 수직 반동<br>
+                               +10.00% 반동 회복 속도<br>
+                               +20.00% 호흡 흔들림<br>
+                               +15.00% 격발 흔들림<br>
+                               조준 속도와 조준 시 흔들림이 늘어나지만, 반동과 반동 회복 시간이 줄어듭니다">하프 손잡이</option>
+                               <option value="-15% 반동 패턴<br>
+                               -20% 호흡 흔들림<br>
+                               -20% 격발 흔들림<br>
+                               +10% 수직 반동<br>
+                               -15% 반동 회복 속도<br>
+                               반동이 늘어나지만, 조준 시 흘들림과 반동 회복 시간이 줄어듭니다.">라이트 손잡이</option>
+                               <option value="-20.00% 반동 패턴<br>
+                               -5.00% 수직 반동<br>
+                               +30.00% 정조준 속도<br>
+                               -20.00% 호흡 흔들림<br>
+                               수평 반동, 반동 회복 시간, 조준 시 흔들림이 늘어나지만, 수직 반동이 현저히 줄어듭니다">엄지 손잡이</option>
+                               
+                                    </select></form></p>
+                                  
+                                    <p><form name="side">
+                                        &nbsp; <select name="sides" onchange="showData5()">
+                                      <option value="효과 없음">개머리판</option>
+                                      <option value="- 20.00% 수직 반동<br>
+                                      - 20.00% 호흡 감소 속도<br>
+                                      - 15.00% 흔들림<br>
+                                      총구 흔들림이 줄어들고 발사시 안정성이 커집니다">칙패드</option>
+                                      
+                                            </select></form></p>
+                                          
+                        </td>
+                    </tr>
+                    
+<tr>
+                        <td colspan="2" bgcolor="#FAF4C0" height="300%">
+                                <p id="4P">&nbsp;</p>
+                                <p id="5P">&nbsp;</p>
+                                <p id="6P">&nbsp;</p>
+                                <p id="1P">&nbsp;</p>
+                                <p id="2P">&nbsp;</p>
+                                <p id="3P">&nbsp;</p>
+                                <p id="7P">&nbsp;</p>
+                                <p id="8P">&nbsp;</p>
+                                <p id="9P">&nbsp;</p>
+                                <p id="10P">&nbsp;</p>
+                                <p id="11P">&nbsp;</p>
+                                <p id="12P">&nbsp;</p>
+                                <p id="13P">&nbsp;</p>
+                                <p id="14P">&nbsp;</p>
+                                <p id="15P">&nbsp;</p>
+                        </td>
+                        </tr>
+                    </tr>
+                  
+                
+                </p>
+                </table>
+                
+                    <p>
+                            <a href="bggi.html"><img src="bggi.png" style="width:150px;height:130px;"></a>
+                            </p>
+                        </body>
+                        <script>
+                                function showData1() {
+                                    var theSelect = tan.demo;
+                                    var firstP = document.getElementById('1P');
+                                    var secondP = document.getElementById('2P');
+                                    var thirdP = document.getElementById('3P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }   
+                                function showData2() {
+                                    var theSelect = tip.tips;
+                                    var firstP = document.getElementById('4P');
+                                    var secondP = document.getElementById('5P');
+                                    var thirdP = document.getElementById('6P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                                function showData3() {
+                                    var theSelect = eye.eyes;
+                                    var firstP = document.getElementById('7P');
+                                    var secondP = document.getElementById('8P');
+                                    var thirdP = document.getElementById('9P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                                function showData4() {
+                                    var theSelect = hand.handle;
+                                    var firstP = document.getElementById('10P');
+                                    var secondP = document.getElementById('11P');
+                                    var thirdP = document.getElementById('12P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                                function showData5() {
+                                    var theSelect = side.sides;
+                                    var firstP = document.getElementById('13P');
+                                    var secondP = document.getElementById('14P');
+                                    var thirdP = document.getElementById('15P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                            </script>

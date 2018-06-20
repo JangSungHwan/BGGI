@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BGGI</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+        </style>
+    </head>
+    <center><body background="background.jpg">
+        <center>
+            <div style="background-color: #ffffff;width:55%;height:600%; font-family: Arial, Helvetica, sans-serif;opacity: 0.93;">
+               <p>&nbsp;</p>
+                <h1>P1911</h1>
+                <p>
+                <table border=0 width="90%" height="300" bgcolor="white">
+                    <tr>
+                   <td bgcolor="whitesmoke"> <center><a href="P1911.html"><img src="P1911.PNG" title="아직도 이걸쓴단 말야? 할아버지건줄 알았네."></a></center></td>
+                 
+                        <td bgcolor="#D9E5FF"> <p> 
+                                &nbsp;&nbsp;전투력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<meter value="0.20"></meter><br />
+                                &nbsp;&nbsp;유효사거리&nbsp;&nbsp;<meter value="0.35"></meter><br />
+                                &nbsp;&nbsp;안정성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<meter value="0.2"></meter><br />
+                                &nbsp;&nbsp;연사율&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<meter value="0.2"></meter><br />
+                            
+                       <form name="tip">
+                            &nbsp; <select name="tips" onchange="showData2()">
+                            <option value="효과 없음">총구 파츠</option>
+                        
+                            <option value="- 5.00% 탄튐<br>
+                            발사음을 억제해 줍니다">소음기</option>
+                        </select>
+                    </form>    
+
+                 <p><form name="tan">
+                        &nbsp; <select name="demo" onchange="showData1()">
+                                    <option value="효과 없음">탄창</option>
+                                    <option value="+5발 (총 12발) <br>
+                                    장탄 수가 증가합니다">대용량 탄창</option>
+                                    <option value="- 30.00% 재장전 속도<br>
+                                    재장전 속도가 빨라집니다">퀵드로우 탄창</option>
+                                    <option value="+5발 (총 12발)<br>
+                                    - 30.00% 재장전 속도<br>
+                                    재장전 속도가 크게 빨라지고 장탄 수가 증가합니다">대용량 퀵드로우 탄창</option>
+                                </select>
+                            </form> </p>
+
+                 <p><form name="eye">
+                        &nbsp; <select name="eyes" onchange="showData3()">
+                      <option value="효과 없음">조준경</option>
+                      <option value="+ 20.00% 정조준 속도">레드도트사이트</option>
+                 
+                            </select></form></p>
+                          
+                           
+                                  
+                                          
+                        </td>
+                    </tr>
+                    
+<tr>
+                        <td colspan="2" bgcolor="#FAF4C0" height="300%">
+                                <p id="4P">&nbsp;</p>
+                                <p id="5P">&nbsp;</p>
+                                <p id="6P">&nbsp;</p>
+                                <p id="1P">&nbsp;</p>
+                                <p id="2P">&nbsp;</p>
+                                <p id="3P">&nbsp;</p>
+                                <p id="7P">&nbsp;</p>
+                                <p id="8P">&nbsp;</p>
+                                <p id="9P">&nbsp;</p>
+                            
+                        </td>
+                        </tr>
+                    </tr>
+                  
+                
+                </p>
+                </table>
+                
+                    <p>
+                            <a href="bggi.html"><img src="bggi.png" style="width:150px;height:130px;"></a>
+                            </p>
+                        </body>
+                        <script>
+                                function showData1() {
+                                    var theSelect = tan.demo;
+                                    var firstP = document.getElementById('1P');
+                                    var secondP = document.getElementById('2P');
+                                    var thirdP = document.getElementById('3P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }   
+                                function showData2() {
+                                    var theSelect = tip.tips;
+                                    var firstP = document.getElementById('4P');
+                                    var secondP = document.getElementById('5P');
+                                    var thirdP = document.getElementById('6P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                                function showData3() {
+                                    var theSelect = eye.eyes;
+                                    var firstP = document.getElementById('7P');
+                                    var secondP = document.getElementById('8P');
+                                    var thirdP = document.getElementById('9P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                                function showData4() {
+                                    var theSelect = hand.handle;
+                                    var firstP = document.getElementById('10P');
+                                    var secondP = document.getElementById('11P');
+                                    var thirdP = document.getElementById('12P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                                function showData5() {
+                                    var theSelect = side.sides;
+                                    var firstP = document.getElementById('13P');
+                                    var secondP = document.getElementById('14P');
+                                    var thirdP = document.getElementById('15P');
+                                    firstP.innerHTML = (theSelect[theSelect.selectedIndex].text);
+                                    secondP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+                                }
+                            </script>
